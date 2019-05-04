@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Borderlands 3</title>
+		<link rel="stylesheet" href="flipclock.css">
+		<link rel="icon" type="image/x-icon" href="favicon.png" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="flipclock.js"></script>	
+	</head>
+	<body>
+		<div class="clock" style="margin:2em;"></div>
+		<div class="penis"></div>
+		<script type="text/javascript">
+			var clock;
+			var today = new Date();
+			var release = new Date("2019-09-12T21:00:00Z");
+			var time = Math.abs((today.getTime() - release.getTime())/1000);
+			$(document).ready(function() {
+				// Instantiate a counter
+				clock = new FlipClock($('.clock'), time, {
+					clockFace: 'DailyCounter',
+					autoStart: true,
+					countdown: true
+				});
+			});
+		</script>
+	</body>
+</html> 
